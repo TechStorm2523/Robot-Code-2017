@@ -1,0 +1,29 @@
+
+
+Stuff to do:
+	Finish TurnForAngle
+	Check DriveForDistance
+	Calibrate
+	Write Auto Programs
+	
+	
+Potential Issues:
+	Motor Declarations
+	Subsystem Interruptions
+	
+	
+Misc:
+
+Captain's Log, Stardate 40924.6.
+
+The program I've written may or may not break immediately on startup. We will see.
+
+Info:
+/**Simple Drive Macro That takes a number of feet as a parameter.
+ * Info: 1 rotation of a 6 inch diameter wheel covers 1.57083333333 feet
+ * Info: 2607.5331564987 encoder pulses per foot. Gonna have to round up to 2608 per foot,
+ * unless a decimal solution becomes apparent.
+ *
+ * Info: Pulses Per Angle of Rotation: 60.69
+ *
+ */
