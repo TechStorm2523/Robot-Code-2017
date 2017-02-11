@@ -9,12 +9,12 @@ public class Auto1 extends CommandGroup {
 
     public Auto1() { //This first part should be deleted after testing, as it is simply for calibration
     	addSequential(new DriveForDistance(4,1));
-    	addSequential(new TurnForAngle(90,.5,-1));
-    	addSequential(new DriveForDistance(4,1));
-    	addSequential(new TurnForAngle(90,.5,-1));
-    	addSequential(new DriveForDistance(4,1));
-    	addSequential(new TurnForAngle(90,.5,-1));
-    	addSequential(new DriveForDistance(4,1));
+//    	addSequential(new TurnForAngle(90,.5,-1));
+//    	addSequential(new DriveForDistance(4,1));
+//    	addSequential(new TurnForAngle(90,.5,-1));
+//    	addSequential(new DriveForDistance(4,1));
+//    	addSequential(new TurnForAngle(90,.5,-1));
+//    	addSequential(new DriveForDistance(4,1));
         // Add Commands here:
         
     	addSequential(new DriveForDistance(7.77, 1)); //Drive to base line

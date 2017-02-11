@@ -11,16 +11,14 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team2523.robot.commands.Auto0;
+import org.usfirst.frc.team2523.robot.commands.Climb;
 import org.usfirst.frc.team2523.robot.commands.DrainHopper;
-
 import org.usfirst.frc.team2523.robot.commands.DriveRunner;
-import org.usfirst.frc.team2523.robot.commands.ExampleCommand;
 import org.usfirst.frc.team2523.robot.commands.FeedFuel;
-
 import org.usfirst.frc.team2523.robot.subsystems.DriveTrain;
-import org.usfirst.frc.team2523.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team2523.robot.subsystems.FeedSystem;
 import org.usfirst.frc.team2523.robot.subsystems.GearSystem;
+import org.usfirst.frc.team2523.robot.subsystems.HopperSystem;
 import org.usfirst.frc.team2523.robot.subsystems.LaunchSystem;
 import org.usfirst.frc.team2523.robot.subsystems.WinchSystem;
 
@@ -42,6 +40,7 @@ public class Robot extends IterativeRobot {
 	public static final LaunchSystem launchSystem = new LaunchSystem();
 	public static final GearSystem gearSystem = new GearSystem();
 	public static final WinchSystem winchSystem = new WinchSystem();
+	public static final HopperSystem hopperSystem = new HopperSystem();
 
 	
 	//Instantiate Commands (rework/obliterate if robot immediately breaks)
@@ -75,9 +74,11 @@ public class Robot extends IterativeRobot {
 		
 		
 		oi = new OI();
-		chooser.addDefault("Default Auto", new ExampleCommand());
+		
 		chooser.addObject("My Auto", new Auto0());
+		SmartDashboard.putData("Winch Thing", new Climb());
 		SmartDashboard.putData("Auto mode", chooser);
+		SmartDashboard.putData(winchSystem);
 	}
 
 	/**

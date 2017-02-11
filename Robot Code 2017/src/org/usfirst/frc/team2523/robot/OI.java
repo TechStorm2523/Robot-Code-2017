@@ -4,8 +4,8 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
+import org.usfirst.frc.team2523.robot.commands.Climb;
 import org.usfirst.frc.team2523.robot.commands.DrainHopper;
-import org.usfirst.frc.team2523.robot.commands.ExampleCommand;
 import org.usfirst.frc.team2523.robot.commands.FeedFuel;
 
 /**
@@ -16,10 +16,10 @@ public class OI {
 	public static Joystick controlStick = new Joystick(1);
 	//// CREATING BUTTONS
 	
-	//Reverse = 7
-	//Unload = 1
-	//Feed = 5
-	//Climb = 11
+	//Reverse = 7 ??
+	//Unload = 2
+	//Feed = trigger
+	//Climb = 6
 	// One type of button is a joystick button which is any button on a
 	//// joystick.
 	// You create one by telling it which joystick it's on and which button
@@ -34,6 +34,9 @@ public class OI {
 	Button c7 = new JoystickButton(controlStick, 7);
 	Button c5 = new JoystickButton(controlStick, 5);
 	Button c11 = new JoystickButton(controlStick, 11);
+	Button c6 = new JoystickButton(controlStick, 6);
+	Button c2 = new JoystickButton(controlStick, 2);
+	
 	
 	public OI(){
 	
@@ -47,9 +50,11 @@ public class OI {
 
 	// Run the command while the button is being held down and interrupt it once
 	// the button is released.
-	trigger.whileHeld(new DrainHopper());
-	c5.whileHeld(new FeedFuel());
-
+	
+	trigger.whileHeld(new FeedFuel());
+	
+	c2.whileHeld(new DrainHopper());
+	c6.whileHeld(new Climb());
 	// Start the command when the button is released and let it run the command
 	// until it is finished as determined by it's isFinished method.
 	// button.whenReleased(new ExampleCommand());

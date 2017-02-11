@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team2523.robot.RobotMap"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Talon"/>
 <fullyQualifiedTypeName name="com.ctre.CANTalon"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team2523.robot.OI"/>
@@ -15,6 +14,10 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team2523.robot.subsystems.GearSystem"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team2523.robot.commands.DrainHopper"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team2523.robot.Robot"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Encoder"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team2523.robot.RobotMap"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team2523.robot.subsystems.HopperSystem"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team2523.robot.Robot"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team2523.robot.commands.HopperConditions"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Spark"/>
 </qualifiedTypeNameHistroy>

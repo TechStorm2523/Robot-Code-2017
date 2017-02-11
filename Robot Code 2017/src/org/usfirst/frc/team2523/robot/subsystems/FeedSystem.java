@@ -2,8 +2,10 @@ package org.usfirst.frc.team2523.robot.subsystems;
 
 import org.usfirst.frc.team2523.robot.OI;
 import org.usfirst.frc.team2523.robot.RobotMap;
+import org.usfirst.frc.team2523.robot.commands.ForwardFeed;
 
 import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -13,13 +15,10 @@ import com.ctre.CANTalon;
  *
  */
 public class FeedSystem extends Subsystem {
-	CANTalon intake = new CANTalon(RobotMap.intake);
-	CANTalon transitBelt = new CANTalon(RobotMap.transitBelt);
-	CANTalon liftBelt = new CANTalon(RobotMap.liftBelt);
-	CANTalon outPut = new CANTalon(RobotMap.rightMotor2);
+	Spark intake = new Spark(RobotMap.intake);
 	
 	public void feedIn(){
-		intake.set(1);
+		intake.set(-1);
 		
 		
 	}
@@ -29,6 +28,6 @@ public class FeedSystem extends Subsystem {
 	
 	public void initDefaultCommand() {
 		// Set the default command for a subsystem here.
-		// setDefaultCommand();
+		setDefaultCommand(new ForwardFeed());
 	}
 }
