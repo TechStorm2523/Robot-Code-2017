@@ -11,15 +11,12 @@ import edu.wpi.first.wpilibj.command.Command;
 public class Auto0 extends Command {
 
     public Auto0() {
-        requires(Robot.driveTrain);
-        requires(Robot.feedSystem);
-        requires(Robot.launchSystem);
-        requires(Robot.gearSystem);
+        
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.gearSystem.down();
+    	
     	//Put Something Here.
     }
 

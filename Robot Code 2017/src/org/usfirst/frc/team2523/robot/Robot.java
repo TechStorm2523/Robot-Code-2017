@@ -1,6 +1,6 @@
 
 package org.usfirst.frc.team2523.robot;
-import com.autodesk.bxd.*;
+
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Timer;
@@ -12,11 +12,11 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team2523.robot.commands.Auto0;
 import org.usfirst.frc.team2523.robot.commands.DrainHopper;
-import org.usfirst.frc.team2523.robot.commands.DrivePIDRunner;
+
 import org.usfirst.frc.team2523.robot.commands.DriveRunner;
 import org.usfirst.frc.team2523.robot.commands.ExampleCommand;
 import org.usfirst.frc.team2523.robot.commands.FeedFuel;
-import org.usfirst.frc.team2523.robot.subsystems.DrivePID;
+
 import org.usfirst.frc.team2523.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team2523.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team2523.robot.subsystems.FeedSystem;
@@ -36,22 +36,21 @@ import com.ctre.CANTalon;
 public class Robot extends IterativeRobot {
 	
 	//Instantiate Subsystems
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	//public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static final DriveTrain driveTrain = new DriveTrain();
 	public static final FeedSystem feedSystem = new FeedSystem();
 	public static final LaunchSystem launchSystem = new LaunchSystem();
 	public static final GearSystem gearSystem = new GearSystem();
 	public static final WinchSystem winchSystem = new WinchSystem();
-	public static final DrivePID drivepid = new DrivePID();
+
 	
 	//Instantiate Commands (rework/obliterate if robot immediately breaks)
-	public static final DriveRunner driverunner = new DriveRunner();
-	public static final DrivePIDRunner drivepidrunner = new DrivePIDRunner();
-	public static final Auto0 auto1 = new Auto0();
-	public static final DrainHopper drainHopper = new DrainHopper();
-	public static final FeedFuel feedFuel = new FeedFuel();
+//	public static final DriveRunner driverunner = new DriveRunner();
+//	public static final Auto0 auto1 = new Auto0();
+//	public static final DrainHopper drainHopper = new DrainHopper();
+//	public static final FeedFuel feedFuel = new FeedFuel();
+//	
 	
-	DriveTrain drivetrain = new DriveTrain();
 //	CANTalon motorL1 = new CANTalon(0);
 //	CANTalon motorL2 = new CANTalon(1);
 //	CANTalon motorR1 = new CANTalon(2);
@@ -74,7 +73,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		
-		EmulatorControl.start(2523,Robot.class);
+		
 		oi = new OI();
 		chooser.addDefault("Default Auto", new ExampleCommand());
 		chooser.addObject("My Auto", new Auto0());

@@ -3,6 +3,7 @@ package org.usfirst.frc.team2523.robot.subsystems;
 import org.usfirst.frc.team2523.robot.OI;
 import org.usfirst.frc.team2523.robot.Robot;
 import org.usfirst.frc.team2523.robot.RobotMap;
+import org.usfirst.frc.team2523.robot.commands.DriveRunner;
 
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.RobotDrive;
@@ -28,7 +29,11 @@ public class DriveTrain extends Subsystem {
 	private double vDriveFR;
 	private double vDriveRO;
 	
-	RobotDrive driveControl = new RobotDrive(motorL1,motorR1,motorL2,motorR2);
+	RobotDrive driveControl = new RobotDrive(motorL1, motorL2, motorR1, motorR2);
+	public DriveTrain(){
+	driveControl.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, true);
+	driveControl.setInvertedMotor(RobotDrive.MotorType.kFrontRight, true);
+	}
 	public double getLeftValue(){
 		return motorL2.getPulseWidthPosition();
 	}
@@ -67,6 +72,6 @@ public class DriveTrain extends Subsystem {
 	}
 	public void initDefaultCommand() {
 		// Set the default command for a subsystem here.
-		setDefaultCommand(Robot.driverunner);
+		setDefaultCommand(new DriveRunner());
 	}
 }
